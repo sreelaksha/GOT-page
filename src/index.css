@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'IM Fell English SC', serif;
+  
 }
 
 body {
@@ -11,4 +12,12 @@ section {
   padding: 75px 0;
   width: 92%;
   margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-family: 'Tenor Sans', sans-serif;
 }

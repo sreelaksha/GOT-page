@@ -3,12 +3,36 @@ import HouseService from "../services/HouseService"
 import styled from 'styled-components'
 
 const OverviewWrapper= styled.div`
-
+    
 `
 const HouseCardContainer = styled.section`
         display: grid;
-        grid-template-rows: auto;
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
+
+        //for smartphones
+        @media(min-width: 320px) and (max-width: 480px){
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        //for tablets, iPads
+        @media(min-width: 481px) and (max-width: 768px){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        //for small screens, laptops
+        @media(min-width: 769px) and (max-width: 1024px){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        //for large screens, desktop
+        @media(min-width: 1300px){
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
 `
 
 const HouseCard= styled.div`
@@ -37,16 +61,16 @@ export default class HouseComponent extends React.Component {
     render(){
         return(
             <OverviewWrapper>
-                <h1>Game Of Thrones Overview</h1>
-                <HouseCardContainer>
-                    {this.state.houses.map(
-                        (house, index) => 
-                        <HouseCard key={index}>
-                            <p> {house.name} </p>
-                            <p>{house.region}</p>
-                        </HouseCard>
-                    )}  
-                </HouseCardContainer>  
+                <h1>GAME OF THRONES HOUSES</h1>
+                    <HouseCardContainer>
+                        {this.state.houses.map(
+                            (house, index) => 
+                            <HouseCard key={index}>
+                                <h2> {house.name} </h2>
+                                <p>{house.region}</p>
+                            </HouseCard>
+                        )}  
+                    </HouseCardContainer> 
             </OverviewWrapper>
         )
     }
