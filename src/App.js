@@ -1,15 +1,20 @@
-import { Routes, Route } from 'react-router-dom'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 import HouseComponent from './components/HouseComponent'
+import HouseDetailsComponent from './components/HouseDetailsComponent'
 import './App.css';
 
-function App() {
-  return (
-    <div>
-      <Routes>
-          <Route path="/" element={<HouseComponent />} />
-      </Routes>
-    </div>
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+          <Switch>
+                <Route path = "/house/:id" component = {HouseDetailsComponent} />
+                <Route path = "/" component = {HouseComponent} />
+          </Switch>
+      </div>
   );
+}
 }
 
 export default App;

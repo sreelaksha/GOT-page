@@ -54,8 +54,7 @@ export default class HouseComponent extends React.Component {
 
     handleCardClick = (house) => {
         const houseId = getIdFromUrl(house.url)
-        console.log(houseId[3]);
-        window.open(`/house/${houseId[3]} `);
+        this.props.history.push(`/house/${houseId}`);
     }
 
     render(){
