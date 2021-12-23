@@ -1,6 +1,6 @@
 //to get id from url
 export function getIdFromUrl(url){
-    if(!url.includes("https")){
+    if(typeof(url) != "string" || !url.includes("https")){
         return url;
     }
     return url.split('/').pop();

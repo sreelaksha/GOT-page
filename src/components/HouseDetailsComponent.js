@@ -19,8 +19,7 @@ class HouseDetailsComponent extends React.Component {
             .then(result => {
                         this.setState({houseDetails : result,
                    })
-            })
-            
+            }) 
         }
     
     render(){
