@@ -1,6 +1,8 @@
-import React from "react"
-import HouseService from "../services/HouseService"
+import React from 'react'
+import HouseService from '../services/HouseService'
 import styled from 'styled-components'
+import CardComponent from './CardComponent'
+import {getIdFromUrl} from '../utils'
 
 const OverviewWrapper= styled.div`
     
@@ -34,15 +36,6 @@ const HouseCardContainer = styled.section`
             grid-template-columns: repeat(5, 1fr);
         }
 `
-
-const HouseCard= styled.div`
-        border: 1px solid rgba(0, 0, 20, 0.1);
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-        padding: 10px;
-        margin: 10px 0;
-`
-
 export default class HouseComponent extends React.Component {
     constructor(){
         super()
@@ -58,18 +51,27 @@ export default class HouseComponent extends React.Component {
                 })
             })
     }
+
+    handleCardClick = (house) => {
+        const houseId = getIdFromUrl(house.url)
+        console.log(houseId[3]);
+        window.open(`/house/${houseId[3]} `);
+    }
+
     render(){
         return(
             <OverviewWrapper>
                 <h1>GAME OF THRONES HOUSES</h1>
                     <HouseCardContainer>
-                        {this.state.houses.map(
+                       {this.state.houses.map(
                             (house, index) => 
-                            <HouseCard key={index}>
+                            <CardComponent key={index}>
+                            <div onClick={this.handleCardClick.bind(this,house)}>
                                 <h2> {house.name} </h2>
                                 <p>{house.region}</p>
-                            </HouseCard>
-                        )}  
+                            </div>
+                            </CardComponent> 
+                        )}       
                     </HouseCardContainer> 
             </OverviewWrapper>
         )
