@@ -1,7 +1,7 @@
 import React from 'react'
 import HouseService from '../services/HouseService'
 import AttributeValueComponent from './shared/AttributeValueComponent'
-import CardComponent from '../styles/CardComponent'
+import {WideCard} from '../styles/CardComponent'
 import { withRouter } from "react-router-dom";
 import Page from "./shared/Page"
 
@@ -29,7 +29,7 @@ class HouseDetailsComponent extends React.Component {
                 <h1> House Details </h1>
                 {this.state.houseDetails && (
                     <section>
-                            <CardComponent>
+                            <WideCard>
                                 <AttributeValueComponent label="Name" value={this.state.houseDetails.name} />
                                 <AttributeValueComponent label="Region" value={this.state.houseDetails.region} />
                                 <AttributeValueComponent label="Coat Of Arms" value={this.state.houseDetails.coatOfArms} />
@@ -45,7 +45,7 @@ class HouseDetailsComponent extends React.Component {
                                 <AttributeValueComponent label="Ancestral Weapons" value={this.state.houseDetails.ancestralWeapons} />
                                 <AttributeValueComponent label="Cadet Branches" value={this.state.houseDetails.cadetBranches} />
                                 <AttributeValueComponent label="Sworn Members" value={this.state.houseDetails.swornMembers} />
-                            </CardComponent>
+                            </WideCard>
                     </section>
                 )}
             </Page>

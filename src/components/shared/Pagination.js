@@ -5,7 +5,7 @@ const PaginationComponent = (props) => {
     <Box justify="center" alignContent="center">
       <Pagination
         background="#476172"
-        numberItems={444}
+        numberItems={props.noOfPages}
         step={12}
         alignSelf="center"
         size="large"

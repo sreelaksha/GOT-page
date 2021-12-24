@@ -2,7 +2,8 @@ import React from 'react'
 import CharacterService from '../services/CharacterService'
 import { withRouter } from "react-router-dom";
 import AttributeValueComponent from './shared/AttributeValueComponent'
-import CardComponent from '../styles/CardComponent'
+import {WideCard} from '../styles/CardComponent'
+import Page from "./shared/Page"
 
 class CharacterDetailsComponent extends React.Component {
     constructor(props){
@@ -24,11 +25,11 @@ class CharacterDetailsComponent extends React.Component {
 
     render(){
         return(
-            <div>
+            <Page>
                     <h1> Characters</h1>
                     {this.state.characters && (
                     <section>
-                            <CardComponent>
+                            <WideCard>
                                 <AttributeValueComponent label="Name" value={this.state.characters.name} />
                                 <AttributeValueComponent label="Gender" value={this.state.characters.gender} /> 
                                 <AttributeValueComponent label="Culture" value={this.state.characters.culture} />
@@ -44,10 +45,10 @@ class CharacterDetailsComponent extends React.Component {
                                 <AttributeValueComponent label="Pov Books" value={this.state.characters.povBooks} />
                                 <AttributeValueComponent label="Tv Series" value={this.state.characters.tvSeries} /> 
                                 <AttributeValueComponent label="Played By" value={this.state.characters.playedBy} /> 
-                            </CardComponent>
+                            </WideCard>
                     </section>
                 )}
-            </div>
+            </Page>
         )
     }
 }
