@@ -1,9 +1,9 @@
 import React from "react";
-import BookService from "../services/BookService";
-import { Card, CardContainer } from "../styles/CardComponent";
-import { getIdFromUrl } from "../utils";
-import Page from "./shared/Page";
-import Pagination from "./shared/Pagination";
+import BookService from "../../services/BookService";
+import { Card, CardContainer } from "../../styles/CardComponent";
+import { getIdFromUrl } from "../../utils";
+import Page from "../common/Page";
+import Pagination from "../common/Pagination";
 
 export default class BooksComponent extends React.Component {
   constructor() {

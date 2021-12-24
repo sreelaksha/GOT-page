@@ -1,9 +1,9 @@
 import React from "react";
-import CharacterService from "../services/CharacterService";
-import { Card, CardContainer } from "../styles/CardComponent";
-import { getIdFromUrl } from "../utils";
-import Page from "./shared/Page";
-import Pagination from "./shared/Pagination";
+import CharacterService from "../../services/CharacterService";
+import { Card, CardContainer } from "../../styles/CardComponent";
+import { getIdFromUrl } from "../../utils";
+import Page from "../common/Page";
+import Pagination from "../common/Pagination";
 
 export default class CharactersComponent extends React.Component {
   constructor() {
@@ -26,6 +26,7 @@ export default class CharactersComponent extends React.Component {
       this.setState({
         characters: result,
       });
+      console.log(this.state.characters);
     });
   };
 
@@ -39,7 +40,12 @@ export default class CharactersComponent extends React.Component {
               key={index}
               onClick={this.handleCardClick.bind(this, character)}
             >
-              <h2> {character.name} </h2>
+              {character.name !== "" ? (
+                <h2> {character.name} </h2>
+              ) : (
+                <h2>Not known</h2>
+              )}
+              <p>{character.gender}</p>
             </Card>
           ))}
         </CardContainer>

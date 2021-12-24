@@ -49,8 +49,14 @@ export const CardContainer = styled.section`
 export const WideCard = styled.div`
   border: 1px solid rgba(0, 0, 20, 0.1);
   border-radius: 10px;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 5%;
   background-color: #1a2f41;
   color: white;
+`;
+
+export const LinkBox = styled.button`
+  & a {
+    text-decoration: none;
+    color: black;
+  }
 `;

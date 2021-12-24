@@ -1,9 +1,9 @@
 import React from "react";
-import HouseService from "../services/HouseService";
-import { Card, CardContainer } from "../styles/CardComponent";
-import { getIdFromUrl } from "../utils";
-import Page from "./shared/Page";
-import Pagination from "./shared/Pagination";
+import HouseService from "../../services/HouseService";
+import { Card, CardContainer } from "../../styles/CardComponent";
+import { getIdFromUrl } from "../../utils";
+import Page from "../common/Page";
+import Pagination from "../common/Pagination";
 
 export default class HousesComponent extends React.Component {
   constructor() {

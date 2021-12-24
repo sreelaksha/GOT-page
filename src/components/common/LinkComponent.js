@@ -1,9 +1,10 @@
 import React from "react";
+import { LinkBox } from "../../styles/CardComponent";
 
 const LinkComponent = (props) => (
-  <button>
+  <LinkBox>
     <a href={"/" + props.type + "/" + props.id}> #{props.id} </a>
-  </button>
+  </LinkBox>
 );
 
 export default LinkComponent;

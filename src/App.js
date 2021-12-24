@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import HousesComponent from "./components/HousesComponent";
-import CharactersComponent from "./components/CharactersComponent";
-import BooksComponent from "./components/BooksComponent";
-import HouseDetailsComponent from "./components/HouseDetailsComponent";
-import CharacterDetailsComponent from "./components/CharacterDetailsComponent";
-import BookDetailsComponent from "./components/BookDetailsComponent";
+import HousesComponent from "./components/house/HousesComponent";
+import CharactersComponent from "./components/character/CharactersComponent";
+import BooksComponent from "./components/book/BooksComponent";
+import HouseDetailsComponent from "./components/house/HouseDetailsComponent";
+import CharacterDetailsComponent from "./components/character/CharacterDetailsComponent";
+import BookDetailsComponent from "./components/book/BookDetailsComponent";
 import { Grommet } from "grommet";
 
 const App = () => {

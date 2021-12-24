@@ -1,9 +1,9 @@
 import React from "react";
-import HouseService from "../services/HouseService";
-import AttributeValueComponent from "./shared/AttributeValueComponent";
-import { WideCard } from "../styles/CardComponent";
+import HouseService from "../../services/HouseService";
+import AttributeValueComponent from "../common/AttributeValueComponent";
+import { WideCard } from "../../styles/CardComponent";
 import { withRouter } from "react-router-dom";
-import Page from "./shared/Page";
+import Page from "../common/Page";
 
 class HouseDetailsComponent extends React.Component {
   constructor(props) {

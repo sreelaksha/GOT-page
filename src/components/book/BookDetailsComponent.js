@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import BookService from "../services/BookService";
+import BookService from "../../services/BookService";
 import { withRouter } from "react-router-dom";
-import AttributeValueComponent from "./shared/AttributeValueComponent";
-import { WideCard } from "../styles/CardComponent";
-import Page from "./shared/Page";
+import AttributeValueComponent from "../common/AttributeValueComponent";
+import { WideCard } from "../../styles/CardComponent";
+import Page from "../common/Page";
 
 class BookDetailsComponent extends React.Component {
   constructor(props) {

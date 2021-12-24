@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Header, Footer, Text, Anchor, Nav } from "grommet";
+import { Box, Header, Anchor, Nav } from "grommet";
 
 const Page = ({ children }) => (
   <Box pad="medium" background="url(/bg-image.jpeg)">
