@@ -1,12 +1,12 @@
 import React from 'react'
 import HouseService from '../services/HouseService'
 import styled from 'styled-components'
-import CardComponent from './CardComponent'
+import CardComponent from '../styles/CardComponent'
 import {getIdFromUrl} from '../utils'
+import Page from './shared/Page'
+import Pagination from './shared/Pagination'
 
-const OverviewWrapper= styled.div`
-    
-`
+
 const HouseCardContainer = styled.section`
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -44,12 +44,7 @@ export default class HouseComponent extends React.Component {
         }
     }
     componentDidMount() {
-        HouseService.getAllHouses()
-            .then(result => {
-                this.setState({
-                    houses: result
-                })
-            })
+        this.loadHouses(1);
     }
 
     handleCardClick = (house) => {
@@ -57,22 +52,32 @@ export default class HouseComponent extends React.Component {
         this.props.history.push(`/house/${houseId}`);
     }
 
+    loadHouses = ({page}) => {
+        HouseService.getAllHouses(page)
+            .then(result => {
+                this.setState({
+                    houses: result
+                })
+            })
+    }
+
     render(){
         return(
-            <OverviewWrapper>
-                <h1>GAME OF THRONES HOUSES</h1>
+            <Page>
+                <h1>HOUSES</h1>
                     <HouseCardContainer>
                        {this.state.houses.map(
                             (house, index) => 
-                            <CardComponent key={index}>
-                            <div onClick={this.handleCardClick.bind(this,house)}>
+                            <CardComponent key={index} onClick={this.handleCardClick.bind(this,house)}>
                                 <h2> {house.name} </h2>
                                 <p>{house.region}</p>
-                            </div>
                             </CardComponent> 
-                        )}       
+                        )} 
                     </HouseCardContainer> 
-            </OverviewWrapper>
+                    <Pagination
+                        handlePagination={this.loadHouses}
+                    />
+            </Page>
         )
     }
 }

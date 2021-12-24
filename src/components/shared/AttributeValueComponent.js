@@ -1,5 +1,5 @@
 import React from 'react'
-import {getIdFromUrl, hasValidValue} from '../utils'
+import {getIdFromUrl, hasValidValue} from '../../utils'
 
 export default class AttributeValueComponent extends React.Component {
     render(){

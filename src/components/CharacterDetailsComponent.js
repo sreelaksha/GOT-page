@@ -1,8 +1,8 @@
 import React from 'react'
 import CharacterService from '../services/CharacterService'
 import { withRouter } from "react-router-dom";
-import AttributeValueComponent from './AttributeValueComponent'
-import CardComponent from './CardComponent'
+import AttributeValueComponent from './shared/AttributeValueComponent'
+import CardComponent from '../styles/CardComponent'
 
 class CharacterDetailsComponent extends React.Component {
     constructor(props){

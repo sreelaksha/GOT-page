@@ -4,20 +4,21 @@ import HouseComponent from './components/HouseComponent'
 import HouseDetailsComponent from './components/HouseDetailsComponent'
 import CharacterDetailsComponent from './components/CharacterDetailsComponent'
 import BookDetailsComponent from './components/BookDetailsComponent'
+import { Grommet } from "grommet"
 
-class App extends React.Component {
-  render() {
+const App = () => {
     return (
-      <div>
-          <Switch>
-                <Route path = "/house/:id" component = {HouseDetailsComponent} />
-                <Route path = "/character/:id" component = {CharacterDetailsComponent} />
-                <Route path = "/book/:id" component = {BookDetailsComponent} />
-                <Route path = "/" component = {HouseComponent} />
-          </Switch>
-      </div>
+      <Grommet>
+        <div>
+            <Switch>
+                  <Route path = "/house/:id" component = {HouseDetailsComponent} />
+                  <Route path = "/character/:id" component = {CharacterDetailsComponent} />
+                  <Route path = "/book/:id" component = {BookDetailsComponent} />
+                  <Route path = "/" component = {HouseComponent} />
+            </Switch>
+        </div>
+      </Grommet>
   );
-}
 }
 
 export default App;

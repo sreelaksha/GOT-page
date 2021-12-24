@@ -1,8 +1,9 @@
 import React from 'react'
 import HouseService from '../services/HouseService'
-import AttributeValueComponent from './AttributeValueComponent'
-import CardComponent from './CardComponent'
+import AttributeValueComponent from './shared/AttributeValueComponent'
+import CardComponent from '../styles/CardComponent'
 import { withRouter } from "react-router-dom";
+import Page from "./shared/Page"
 
 class HouseDetailsComponent extends React.Component {
     constructor(props){
@@ -24,7 +25,7 @@ class HouseDetailsComponent extends React.Component {
     
     render(){
         return(
-            <div>
+            <Page>
                 <h1> House Details </h1>
                 {this.state.houseDetails && (
                     <section>
@@ -47,7 +48,7 @@ class HouseDetailsComponent extends React.Component {
                             </CardComponent>
                     </section>
                 )}
-            </div>
+            </Page>
         )
     }
 }

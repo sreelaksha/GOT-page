@@ -1,8 +1,8 @@
 import ApiService from './ApiService'
 
 const HouseService = {
-    getAllHouses() {
-        return ApiService.get('houses/').then((response) => {
+    getAllHouses(page) {
+        return ApiService.get('houses/?pageSize=12&page='+page).then((response) => {
             return response.data
         })
     },
