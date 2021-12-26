@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkBox } from "../../styles/CardComponent";
+import { LinkBox } from "../../styles/StyleComponent";
 
 const LinkComponent = (props) => (
   <LinkBox>

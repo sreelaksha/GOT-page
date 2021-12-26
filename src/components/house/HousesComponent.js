@@ -4,7 +4,7 @@ import {
   Card,
   CardContainer,
   PaginationContainer,
-} from "../../styles/CardComponent";
+} from "../../styles/StyleComponent";
 import { getIdFromUrl } from "../../utils";
 import Page from "../common/Page";
 import Pagination from "../common/Pagination";

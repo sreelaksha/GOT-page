@@ -1,7 +1,7 @@
 import React from "react";
 import HouseService from "../../services/HouseService";
 import AttributeValueComponent from "../common/AttributeValueComponent";
-import { WideCard } from "../../styles/CardComponent";
+import { WideCard } from "../../styles/StyleComponent";
 import { withRouter } from "react-router-dom";
 import Page from "../common/Page";
 
