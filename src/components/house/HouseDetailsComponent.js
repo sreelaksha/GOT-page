@@ -26,76 +26,74 @@ class HouseDetailsComponent extends React.Component {
       <Page>
         <h1> House Details </h1>
         {this.state.houseDetails && (
-          <section>
-            <WideCard>
-              <AttributeValueComponent
-                label="Name"
-                value={this.state.houseDetails.name}
-              />
-              <AttributeValueComponent
-                label="Region"
-                value={this.state.houseDetails.region}
-              />
-              <AttributeValueComponent
-                label="Coat Of Arms"
-                value={this.state.houseDetails.coatOfArms}
-              />
-              <AttributeValueComponent
-                label="Words"
-                value={this.state.houseDetails.words}
-              />
-              <AttributeValueComponent
-                label="Titles"
-                value={this.state.houseDetails.titles}
-              />
-              <AttributeValueComponent
-                label="Seats"
-                value={this.state.houseDetails.seats}
-              />
-              <AttributeValueComponent
-                type="character"
-                label="Current Lord"
-                value={this.state.houseDetails.currentLord}
-              />
-              <AttributeValueComponent
-                type="character"
-                label="Heir"
-                value={this.state.houseDetails.heir}
-              />
-              <AttributeValueComponent
-                type="house"
-                label="Overlord"
-                value={this.state.houseDetails.overlord}
-              />
-              <AttributeValueComponent
-                label="Founded"
-                value={this.state.houseDetails.founded}
-              />
-              <AttributeValueComponent
-                type="character"
-                label="Founder"
-                value={this.state.houseDetails.founder}
-              />
-              <AttributeValueComponent
-                label="Died Out"
-                value={this.state.houseDetails.diedOut}
-              />
-              <AttributeValueComponent
-                label="Ancestral Weapons"
-                value={this.state.houseDetails.ancestralWeapons}
-              />
-              <AttributeValueComponent
-                type="house"
-                label="Cadet Branches"
-                value={this.state.houseDetails.cadetBranches}
-              />
-              <AttributeValueComponent
-                type="character"
-                label="Sworn Members"
-                value={this.state.houseDetails.swornMembers}
-              />
-            </WideCard>
-          </section>
+          <WideCard>
+            <AttributeValueComponent
+              label="Name"
+              value={this.state.houseDetails.name}
+            />
+            <AttributeValueComponent
+              label="Region"
+              value={this.state.houseDetails.region}
+            />
+            <AttributeValueComponent
+              label="Coat Of Arms"
+              value={this.state.houseDetails.coatOfArms}
+            />
+            <AttributeValueComponent
+              label="Words"
+              value={this.state.houseDetails.words}
+            />
+            <AttributeValueComponent
+              label="Titles"
+              value={this.state.houseDetails.titles}
+            />
+            <AttributeValueComponent
+              label="Seats"
+              value={this.state.houseDetails.seats}
+            />
+            <AttributeValueComponent
+              type="character"
+              label="Current Lord"
+              value={this.state.houseDetails.currentLord}
+            />
+            <AttributeValueComponent
+              type="character"
+              label="Heir"
+              value={this.state.houseDetails.heir}
+            />
+            <AttributeValueComponent
+              type="house"
+              label="Overlord"
+              value={this.state.houseDetails.overlord}
+            />
+            <AttributeValueComponent
+              label="Founded"
+              value={this.state.houseDetails.founded}
+            />
+            <AttributeValueComponent
+              type="character"
+              label="Founder"
+              value={this.state.houseDetails.founder}
+            />
+            <AttributeValueComponent
+              label="Died Out"
+              value={this.state.houseDetails.diedOut}
+            />
+            <AttributeValueComponent
+              label="Ancestral Weapons"
+              value={this.state.houseDetails.ancestralWeapons}
+            />
+            <AttributeValueComponent
+              type="house"
+              label="Cadet Branches"
+              value={this.state.houseDetails.cadetBranches}
+            />
+            <AttributeValueComponent
+              type="character"
+              label="Sworn Members"
+              value={this.state.houseDetails.swornMembers}
+            />
+          </WideCard>
         )}
       </Page>
     );

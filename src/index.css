@@ -1,4 +1,9 @@
-@font-face {
+:root {
+  --border-radius-large: 10px;
+  --primary-background-color: #1a2f41;
+}
+
+  @font-face {
   font-family: 'MayflowerAntique';
   src: url('./assets/fonts/MayflowerAntique.ttf');
 }

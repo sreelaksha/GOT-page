@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   border: 1px solid rgba(0, 0, 20, 0.1);
-  border-radius: 10px;
+  border-radius: var(--border-radius-large);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   padding: 10px;
   margin: 10px 0;
-  background-color: #1a2f41;
+  background-color: var(--primary-background-color);
   color: white;
   text-align: center;
 
@@ -46,12 +46,12 @@ export const CardContainer = styled.section`
     grid-template-columns: repeat(5, 1fr);
   }
 `;
-export const WideCard = styled.div`
+export const WideCard = styled.section`
   border: 1px solid rgba(0, 0, 20, 0.1);
-  border-radius: 10px;
-  padding: 5%;
-  background-color: #1a2f41;
+  border-radius: var(--border-radius-large);
+  background-color: var(--primary-background-color);
   color: white;
+  padding: 5%;
 `;
 
 export const LinkBox = styled.button`
@@ -59,4 +59,8 @@ export const LinkBox = styled.button`
     text-decoration: none;
     color: black;
   }
+`;
+
+export const PaginationContainer = styled.div`
+  padding-bottom: 50px;
 `;

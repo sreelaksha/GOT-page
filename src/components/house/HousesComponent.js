@@ -1,9 +1,14 @@
 import React from "react";
 import HouseService from "../../services/HouseService";
-import { Card, CardContainer } from "../../styles/CardComponent";
+import {
+  Card,
+  CardContainer,
+  PaginationContainer,
+} from "../../styles/CardComponent";
 import { getIdFromUrl } from "../../utils";
 import Page from "../common/Page";
 import Pagination from "../common/Pagination";
+import { Main, Header, Anchor, Nav, Box } from "grommet";
 
 export default class HousesComponent extends React.Component {
   constructor() {
@@ -41,7 +46,9 @@ export default class HousesComponent extends React.Component {
             </Card>
           ))}
         </CardContainer>
-        <Pagination handlePagination={this.loadHouses} noOfPages={444} />
+        <PaginationContainer>
+          <Pagination handlePagination={this.loadHouses} noOfPages={444} />
+        </PaginationContainer>
       </Page>
     );
   }

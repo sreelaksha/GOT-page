@@ -1,6 +1,10 @@
 import React from "react";
 import BookService from "../../services/BookService";
-import { Card, CardContainer } from "../../styles/CardComponent";
+import {
+  Card,
+  CardContainer,
+  PaginationContainer,
+} from "../../styles/CardComponent";
 import { getIdFromUrl } from "../../utils";
 import Page from "../common/Page";
 import Pagination from "../common/Pagination";
@@ -41,7 +45,9 @@ export default class BooksComponent extends React.Component {
             </Card>
           ))}
         </CardContainer>
-        <Pagination handlePagination={this.loadHouses} noOfPages={12} />
+        <PaginationContainer>
+          <Pagination handlePagination={this.loadHouses} noOfPages={12} />
+        </PaginationContainer>
       </Page>
     );
   }

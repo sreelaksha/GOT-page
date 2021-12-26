@@ -10,17 +10,15 @@ import { Grommet } from "grommet";
 
 const App = () => {
   return (
-    <Grommet>
-      <div>
-        <Switch>
-          <Route path="/house/:id" component={HouseDetailsComponent} />
-          <Route path="/character/:id" component={CharacterDetailsComponent} />
-          <Route path="/characters" component={CharactersComponent} />
-          <Route path="/books" component={BooksComponent} />
-          <Route path="/book/:id" component={BookDetailsComponent} />
-          <Route path="/" component={HousesComponent} />
-        </Switch>
-      </div>
+    <Grommet full={true}>
+      <Switch>
+        <Route path="/house/:id" component={HouseDetailsComponent} />
+        <Route path="/character/:id" component={CharacterDetailsComponent} />
+        <Route path="/characters" component={CharactersComponent} />
+        <Route path="/books" component={BooksComponent} />
+        <Route path="/book/:id" component={BookDetailsComponent} />
+        <Route path="/" component={HousesComponent} />
+      </Switch>
     </Grommet>
   );
 };
