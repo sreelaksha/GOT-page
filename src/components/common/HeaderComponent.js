@@ -5,7 +5,12 @@ import { Menu as MenuIcon } from "grommet-icons";
 
 export const HeaderComponent = () => (
   <Header pad="small" justify="around" background="#476172">
-    <Anchor color="light-1" href="/" label="Game of thrones" weight="bolder" />
+    <Anchor
+      color="light-1"
+      href="/gameofthrones-overview/"
+      label="Game of thrones"
+      weight="bolder"
+    />
     <ResponsiveContext.Consumer>
       {(size) =>
         size === "small" ? (
@@ -17,24 +22,36 @@ export const HeaderComponent = () => (
               items={[
                 {
                   label: <Box pad="small">Houses</Box>,
-                  href: "/",
+                  href: "/gameofthrones-overview/",
                 },
                 {
                   label: <Box pad="small">Characters</Box>,
-                  href: "/characters",
+                  href: "/gameofthrones-overview/characters",
                 },
                 {
                   label: <Box pad="small">Books</Box>,
-                  href: "/books",
+                  href: "/gameofthrones-overview/books",
                 },
               ]}
             />
           </Box>
         ) : (
           <Box justify="end" direction="row" gap="medium">
-            <Anchor href="/" color="light-1" label="Houses" />
-            <Anchor href="/characters" color="light-1" label="Characters" />
-            <Anchor href="/books" color="light-1" label="Books" />
+            <Anchor
+              href="/gameofthrones-overview/"
+              color="light-1"
+              label="Houses"
+            />
+            <Anchor
+              href="/gameofthrones-overview/characters"
+              color="light-1"
+              label="Characters"
+            />
+            <Anchor
+              href="/gameofthrones-overview/books"
+              color="light-1"
+              label="Books"
+            />
           </Box>
         )
       }

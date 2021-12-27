@@ -3,7 +3,10 @@ import { LinkBox } from "../../styles/StyleComponent";
 
 const LinkComponent = (props) => (
   <LinkBox>
-    <a href={"/" + props.type + "/" + props.id}> #{props.id} </a>
+    <a href={"/gameofthrones-overview/" + props.type + "/" + props.id}>
+      {" "}
+      #{props.id}{" "}
+    </a>
   </LinkBox>
 );
 

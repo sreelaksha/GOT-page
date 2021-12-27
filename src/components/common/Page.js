@@ -3,7 +3,7 @@ import { Main, Box } from "grommet";
 import Header from "./HeaderComponent";
 
 const Page = ({ children }) => (
-  <Main pad="medium" background={"url(/bg-image.jpeg)"}>
+  <Main pad="medium" background={"url(/gameofthrones-overview/bg-image.jpeg)"}>
     <Header />
     <Box>{children}</Box>
   </Main>

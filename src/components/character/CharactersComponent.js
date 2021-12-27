@@ -27,7 +27,7 @@ export default class CharactersComponent extends React.Component {
 
   handleCardClick = (character) => {
     const characterId = getIdFromUrl(character.url);
-    this.props.history.push(`/character/${characterId}`);
+    this.props.history.push(`/gameofthrones-overview/character/${characterId}`);
   };
 
   handleFilter = (filterValue, filterSelected) => {

@@ -27,7 +27,7 @@ export default class BooksComponent extends React.Component {
 
   handleCardClick = (book) => {
     const bookId = getIdFromUrl(book.url);
-    this.props.history.push(`/book/${bookId}`);
+    this.props.history.push(`/gameofthrones-overview/book/${bookId}`);
   };
 
   handleFilter = (filterValue, filterSelected) => {

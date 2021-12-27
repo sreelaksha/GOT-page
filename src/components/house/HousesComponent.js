@@ -27,7 +27,7 @@ export default class HousesComponent extends React.Component {
 
   handleCardClick = (house) => {
     const houseId = getIdFromUrl(house.url);
-    this.props.history.push(`/house/${houseId}`);
+    this.props.history.push(`/gameofthrones-overview/house/${houseId}`);
   };
 
   handleFilter = (filterValue, filterSelected) => {

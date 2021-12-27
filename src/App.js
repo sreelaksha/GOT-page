@@ -12,12 +12,27 @@ const App = () => {
   return (
     <Grommet full={true}>
       <Switch>
-        <Route path="/house/:id" component={HouseDetailsComponent} />
-        <Route path="/character/:id" component={CharacterDetailsComponent} />
-        <Route path="/characters" component={CharactersComponent} />
-        <Route path="/books" component={BooksComponent} />
-        <Route path="/book/:id" component={BookDetailsComponent} />
-        <Route path="/" component={HousesComponent} />
+        <Route
+          path="/gameofthrones-overview/house/:id"
+          component={HouseDetailsComponent}
+        />
+        <Route
+          path="/gameofthrones-overview/character/:id"
+          component={CharacterDetailsComponent}
+        />
+        <Route
+          path="/gameofthrones-overview/characters"
+          component={CharactersComponent}
+        />
+        <Route
+          path="/gameofthrones-overview/books"
+          component={BooksComponent}
+        />
+        <Route
+          path="/gameofthrones-overview/book/:id"
+          component={BookDetailsComponent}
+        />
+        <Route path="/gameofthrones-overview/" component={HousesComponent} />
       </Switch>
     </Grommet>
   );
