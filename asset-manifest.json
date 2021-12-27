@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/gameofthrones-overview/static/css/main.64de998e.css",
-    "main.js": "/gameofthrones-overview/static/js/main.28ba348a.js",
+    "main.js": "/gameofthrones-overview/static/js/main.41a28531.js",
     "static/js/787.7166e092.chunk.js": "/gameofthrones-overview/static/js/787.7166e092.chunk.js",
     "static/media/MayflowerAntique.ttf": "/gameofthrones-overview/static/media/MayflowerAntique.91d59a4ce059e99404cd.ttf",
     "index.html": "/gameofthrones-overview/index.html",
     "main.64de998e.css.map": "/gameofthrones-overview/static/css/main.64de998e.css.map",
-    "main.28ba348a.js.map": "/gameofthrones-overview/static/js/main.28ba348a.js.map",
+    "main.41a28531.js.map": "/gameofthrones-overview/static/js/main.41a28531.js.map",
     "787.7166e092.chunk.js.map": "/gameofthrones-overview/static/js/787.7166e092.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64de998e.css",
-    "static/js/main.28ba348a.js"
+    "static/js/main.41a28531.js"
   ]
 }
