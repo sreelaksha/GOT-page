@@ -54,13 +54,6 @@ export const WideCard = styled.section`
   padding: 5%;
 `;
 
-export const LinkBox = styled.button`
-  & a {
-    text-decoration: none;
-    color: black;
-  }
-`;
-
 export const PaginationContainer = styled.div`
   padding-bottom: 50px;
 `;

@@ -12,8 +12,8 @@ export default class AttributeValueComponent extends React.Component {
     return (
       <>
         {Array.isArray(value)
-          ? value.length !== 0 &&
-            value !== undefined && (
+          ? value.length != 0 &&
+            value != undefined && (
               <tr>
                 <td width="160px">{this.props.label}</td>
                 <td>
@@ -33,7 +33,7 @@ export default class AttributeValueComponent extends React.Component {
                 </td>
               </tr>
             )
-          : value !== undefined && (
+          : value != undefined && (
               <tr>
                 <td width="150px">{this.props.label}</td>
                 <td>
