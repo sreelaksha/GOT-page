@@ -1,12 +1,13 @@
 import ApiService from "./ApiService";
 
 const HouseService = {
-  getAllHouses(page) {
-    return ApiService.get("houses/?pageSize=12&page=" + page).then(
-      (response) => {
-        return response.data;
-      }
-    );
+  getAllHouses(page, filter) {
+    let filterValue = filter != "" ? filter : "";
+    return ApiService.get(
+      "houses/?pageSize=12&page=" + page + filterValue
+    ).then((response) => {
+      return response.data;
+    });
   },
 
   getHouse(id) {

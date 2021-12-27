@@ -9,7 +9,6 @@ export default class AttributeValueComponent extends React.Component {
       : hasValidValue(this.props.value)
       ? this.props.value
       : null; // else consider only non empty values
-    console.log(value);
     return (
       <>
         {Array.isArray(value)

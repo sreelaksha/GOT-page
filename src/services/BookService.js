@@ -1,8 +1,9 @@
 import ApiService from "./ApiService";
 
 const BookService = {
-  getAllBooks(page) {
-    return ApiService.get("books/?pageSize=12&page=" + page).then(
+  getAllBooks(page, filter) {
+    let filterValue = filter != "" ? filter : "";
+    return ApiService.get("books/?pageSize=12&page=" + page + filterValue).then(
       (response) => {
         return response.data;
       }

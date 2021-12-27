@@ -64,3 +64,7 @@ export const LinkBox = styled.button`
 export const PaginationContainer = styled.div`
   padding-bottom: 50px;
 `;
+
+export const FilterCard = styled.div`
+  background-color: #476172;
+`;

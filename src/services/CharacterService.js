@@ -1,12 +1,13 @@
 import ApiService from "./ApiService";
 
 const CharacterService = {
-  getAllCharacters(page) {
-    return ApiService.get("characters/?pageSize=12&page=" + page).then(
-      (response) => {
-        return response.data;
-      }
-    );
+  getAllCharacters(page, filter) {
+    let filterValue = filter != "" ? filter : "";
+    return ApiService.get(
+      "characters/?pageSize=12&page=" + page + filterValue
+    ).then((response) => {
+      return response.data;
+    });
   },
 
   getCharacter(id) {
