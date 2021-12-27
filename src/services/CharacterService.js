@@ -2,7 +2,7 @@ import ApiService from "./ApiService";
 
 const CharacterService = {
   getAllCharacters(page, filter) {
-    let filterValue = filter != "" ? filter : "";
+    let filterValue = filter !== "" ? filter : "";
     return ApiService.get(
       "characters/?pageSize=12&page=" + page + filterValue
     ).then((response) => {
