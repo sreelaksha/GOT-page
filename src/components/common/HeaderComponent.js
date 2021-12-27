@@ -2,8 +2,9 @@ import React from "react";
 
 import { Anchor, Box, Header, Menu, ResponsiveContext } from "grommet";
 import { Menu as MenuIcon } from "grommet-icons";
+import { withRouter } from "react-router-dom";
 
-export const HeaderComponent = () => (
+export const HeaderComponent = (props) => (
   <Header pad="small" justify="around" background="#476172">
     <Anchor
       color="light-1"
@@ -22,15 +23,21 @@ export const HeaderComponent = () => (
               items={[
                 {
                   label: <Box pad="small">Houses</Box>,
-                  href: "/gameofthrones-overview/",
+                  onClick: () => {
+                    props.history.push(`/gameofthrones-overview/`);
+                  },
                 },
                 {
                   label: <Box pad="small">Characters</Box>,
-                  href: "/gameofthrones-overview/characters",
+                  onClick: () => {
+                    props.history.push(`/gameofthrones-overview/characters`);
+                  },
                 },
                 {
                   label: <Box pad="small">Books</Box>,
-                  href: "/gameofthrones-overview/books",
+                  onClick: () => {
+                    props.history.push(`/gameofthrones-overview/books`);
+                  },
                 },
               ]}
             />
@@ -38,19 +45,25 @@ export const HeaderComponent = () => (
         ) : (
           <Box justify="end" direction="row" gap="medium">
             <Anchor
-              href="/gameofthrones-overview/"
               color="light-1"
               label="Houses"
+              onClick={() => {
+                props.history.push(`/gameofthrones-overview/`);
+              }}
             />
             <Anchor
-              href="/gameofthrones-overview/characters"
               color="light-1"
               label="Characters"
+              onClick={() => {
+                props.history.push(`/gameofthrones-overview/characters`);
+              }}
             />
             <Anchor
-              href="/gameofthrones-overview/books"
               color="light-1"
               label="Books"
+              onClick={() => {
+                props.history.push(`/gameofthrones-overview/books`);
+              }}
             />
           </Box>
         )
@@ -59,4 +72,4 @@ export const HeaderComponent = () => (
   </Header>
 );
 
-export default HeaderComponent;
+export default withRouter(HeaderComponent);
