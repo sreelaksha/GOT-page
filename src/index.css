@@ -1,6 +1,7 @@
 :root {
   --border-radius-large: 10px;
   --primary-background-color: #1a2f41;
+  --secondary-background-color: #476172;
 }
 
   @font-face {

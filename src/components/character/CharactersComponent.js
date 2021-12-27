@@ -4,11 +4,13 @@ import {
   Card,
   CardContainer,
   PaginationContainer,
+  FilterCard,
 } from "../../styles/StyleComponent";
 import { getIdFromUrl } from "../../utils";
 import Page from "../common/Page";
 import Pagination from "../common/Pagination";
-import { Box, Menu } from "grommet";
+import { Box, Menu, Button, Text } from "grommet";
+import { FormDown as FilterIcon, Close as CancelIcon } from "grommet-icons";
 
 export default class CharactersComponent extends React.Component {
   constructor() {
@@ -16,6 +18,7 @@ export default class CharactersComponent extends React.Component {
     this.state = {
       characters: [],
       filter: "",
+      filterSelected: "",
     };
   }
   componentDidMount() {
@@ -27,9 +30,10 @@ export default class CharactersComponent extends React.Component {
     this.props.history.push(`/character/${characterId}`);
   };
 
-  handleFilter = (filterValue) => {
-    console.log(filterValue);
-    this.setState({ filter: filterValue }, () => this.loadCharacters(1));
+  handleFilter = (filterValue, filterSelected) => {
+    this.setState({ filter: filterValue, filterSelected: filterSelected }, () =>
+      this.loadCharacters(1)
+    );
   };
 
   loadCharacters = ({ page }) => {
@@ -46,29 +50,52 @@ export default class CharactersComponent extends React.Component {
     return (
       <Page>
         <h1>Characters</h1>
-        <Box align="end" pad="small">
-          <Menu
-            color="light-1"
-            dropProps={{
-              align: { top: "bottom", left: "left" },
-              elevation: "xlarge",
-            }}
-            label="Gender"
-            items={[
-              {
-                label: "Male",
-                onClick: () => {
-                  this.handleFilter("&gender=Male");
+        <Box align="end" pad="large">
+          <FilterCard>
+            {this.state.filterSelected && (
+              <>
+                <Button
+                  hoverIndicator="status-error"
+                  onClick={() => {
+                    this.handleFilter("", "");
+                  }}
+                  active
+                >
+                  <Box pad="small" direction="row" align="center" gap="small">
+                    <Text>{this.state.filterSelected}</Text> <CancelIcon />
+                  </Box>
+                </Button>
+              </>
+            )}
+            <Text margin="small" color="light-1">
+              Filter:
+            </Text>
+            <Menu
+              color="light-1"
+              dropProps={{
+                align: { top: "bottom", left: "left" },
+                elevation: "xlarge",
+              }}
+              background="#476172"
+              label="Gender"
+              dropBackground="black"
+              icon={<FilterIcon color="light-1" />}
+              items={[
+                {
+                  label: "Male",
+                  onClick: () => {
+                    this.handleFilter("&gender=Male", "Male");
+                  },
                 },
-              },
-              {
-                label: "Female",
-                onClick: () => {
-                  this.handleFilter("&gender=Female");
+                {
+                  label: "Female",
+                  onClick: () => {
+                    this.handleFilter("&gender=Female", "Female");
+                  },
                 },
-              },
-            ]}
-          />
+              ]}
+            />
+          </FilterCard>
         </Box>
         <CardContainer>
           {this.state.characters.map((character, index) => (

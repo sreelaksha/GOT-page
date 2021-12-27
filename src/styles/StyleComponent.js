@@ -66,5 +66,5 @@ export const PaginationContainer = styled.div`
 `;
 
 export const FilterCard = styled.div`
-  background-color: #476172;
+  background-color: var(--secondary-background-color);
 `;
