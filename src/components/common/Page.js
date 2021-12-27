@@ -1,12 +1,12 @@
 import React from "react";
-import { Main, Box } from "grommet";
+import { Box } from "grommet";
 import Header from "./HeaderComponent";
 
 const Page = ({ children }) => (
-  <Main pad="medium" background={"url(/gameofthrones-overview/bg-image.jpeg)"}>
+  <Box pad="medium" background={"url(/gameofthrones-overview/bg-image.jpeg)"}>
     <Header />
     <Box>{children}</Box>
-  </Main>
+  </Box>
 );
 
 Page.propTypes = Box.propTypes;
